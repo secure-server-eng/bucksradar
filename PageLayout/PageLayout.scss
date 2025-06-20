@@ -1,0 +1,12 @@
+.derivs-page-layout {
+    width: 100%;
+    display: flex;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    &__content {
+        flex: 1;
+    }
+}

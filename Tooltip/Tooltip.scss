@@ -1,0 +1,75 @@
+// Tooltip Container
+.deriv-tooltip {
+    z-index: 9999;
+    padding: 8px;
+    border-radius: $border-radius;
+    width: max-content;
+    max-width: 280px;
+    animation: fadeIn ease-in-out 0.2s;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+
+    &--general {
+        background-color: var(--du-general-active, #d6dadb);
+        color: var(--du-text-general, #333);
+    }
+    &--error {
+        background-color: var(--du-status-danger, #ec3f3f);
+        color: var(--du-text-colored-background, #ffffff);
+    }
+}
+
+// Tooltip Arrow
+.deriv-tooltip__arrow,
+.deriv-tooltip__arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+}
+
+.deriv-tooltip__arrow {
+    visibility: hidden;
+}
+
+.deriv-tooltip__arrow::before {
+    visibility: visible;
+    content: "";
+    transform: rotate(45deg);
+}
+
+// Tooltip Arrow Position
+.deriv-tooltip[data-popper-placement^="top"] > .deriv-tooltip__arrow {
+    bottom: -4px;
+}
+
+.deriv-tooltip[data-popper-placement^="bottom"] > .deriv-tooltip__arrow {
+    top: -4px;
+}
+
+.deriv-tooltip[data-popper-placement^="left"] > .deriv-tooltip__arrow {
+    right: -4px;
+}
+
+.deriv-tooltip[data-popper-placement^="right"] > .deriv-tooltip__arrow {
+    left: -4px;
+}
+
+// Hide Tooltip
+.deriv-tooltip[data-popper-reference-hidden] {
+    visibility: hidden;
+    pointer-events: none;
+
+    > .deriv-tooltip__arrow,
+    .deriv-tooltip__arrow::before {
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+// Tooltip Trigger Class
+.deriv-tooltip__trigger {
+    cursor: pointer;
+}
