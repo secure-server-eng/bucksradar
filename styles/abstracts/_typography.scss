@@ -1,0 +1,38 @@
+@at-root {
+    @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese");
+}
+
+$font-sizes: (
+    "2xl": 32px,
+    "xl": 30px,
+    "lg": 28px,
+    "md": 16px,
+    "default": 14px,
+    "sm": 12px,
+    "xs": 10px,
+    "2xs": 8px,
+    "3xs": 6px,
+);
+
+$font-align: (
+    "left": left,
+    "center": center,
+    "right": right,
+);
+
+$font-weights: (
+    "bold": 700,
+    "semibold": 500,
+    "normal": 400,
+    "light": 300,
+);
+
+$line-heights: (
+    "2xl": 2.4,
+    "xl": 2,
+    "lg": 1.75,
+    "md": 1.5,
+    "sm": 1.4,
+    "xs": 1.25,
+    "2xs": 1,
+);

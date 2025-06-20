@@ -1,0 +1,93 @@
+/* Style the accordion section */
+$border: 1px solid var(--du-general-active);
+$animation-duration: 0.3s;
+
+.deriv-accordion {
+    --bg-color: var(--du-general-main-2);
+    --padding-x: 24px;
+    --padding-y: 24px;
+    --header-text-color: var(--du-text-general);
+    --content-bg-color: white;
+    --content-text-color: var(--du-text-general);
+    --content-margin-top: 24px;
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 100%;
+    background-color: var(--bg-color);
+    padding-inline: var(--padding-x);
+    padding-block: var(--padding-y);
+
+    &--compact {
+        --padding-x: 16px;
+        --padding-y: 16px;
+    }
+
+    &--underline {
+        border-bottom: $border;
+    }
+
+    &--shadow,
+    &--bordered {
+        border-radius: $border-radius-2;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &--bordered {
+        border: $border;
+    }
+
+    &--shadow {
+        box-shadow: $deriv-box-shadow;
+    }
+
+    &__header {
+        outline: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--header-text-color);
+        cursor: pointer;
+    }
+
+    &__icon {
+        margin-left: auto;
+        display: inline-block;
+        transition: all $animation-duration ease-in-out;
+
+        &--active {
+            transform: rotate(-180deg);
+        }
+    }
+    &__content {
+        width: 100%;
+        overflow: scroll;
+        opacity: 0;
+        background-color: var(--content-bg-color);
+        transition: all $animation-duration ease;
+
+        &--active {
+            opacity: 1;
+        }
+    }
+
+    &__text {
+        margin-top: var(--content-margin-top);
+        color: var(--content-text-color);
+
+        &--compact {
+            --content-margin-top: 16px;
+        }
+    }
+}
+.accordion__section {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 100%;
+}

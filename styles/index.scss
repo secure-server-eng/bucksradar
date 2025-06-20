@@ -1,0 +1,10 @@
+@import "./base/reset";
+@import "./abstracts/layout";
+@import "./abstracts/variables";
+@import "./abstracts/typography";
+@import "./abstracts/devices";
+@import "./base/root";
+
+html {
+    font-family: "IBM Plex Sans", sans-serif;
+}
